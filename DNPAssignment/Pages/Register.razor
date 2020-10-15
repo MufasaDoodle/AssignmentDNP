@@ -1,0 +1,66 @@
+﻿@page "/register"
+
+@using DNPAssignment.Data;
+@using DNPAssignment.Models;
+@inject IUserService UsersService
+@inject NavigationManager NavigationManager
+
+<h3>Register</h3>
+
+<EditForm Model="@newUser" OnValidSubmit="@AddNewUser">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    
+    <div class="form-group">
+        Username:<br />
+        <InputTextArea rows="1" @bind-Value="newUser.UserName"></InputTextArea>
+    </div>
+    <div class="form-group">
+        Password:<br />
+        <InputTextArea type="password" rows="1" @bind-Value="password"></InputTextArea>
+    </div>
+    <div class="form-group">
+        Confirm password:<br />
+        <InputTextArea type="password" rows="1" @bind-Value="confirmPassword"></InputTextArea>
+    </div>
+    <!--
+    <AuthorizeView Context="AuthContext">
+        <div class="form-group">
+            @if (int.Parse(@AuthContext.User.FindFirst(claim => claim.Type.Equals("Level")).Value) >= 3)
+            {
+                <p>Security Level:<br /></p>
+                <select class="form-control selectpicker" @bind="newUser.SecurityLevel">
+                    <option>--select--</option>
+                    @for (int i = 1; i < 4; i++)
+                    {
+                        <option value="@i"></option>
+                    }
+                </select>
+            }
+        </div>
+    </AuthorizeView>
+        -->
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+    </p>
+</EditForm>
+
+
+@code {
+    private User newUser = new User();
+
+    private string password;
+    private string confirmPassword;
+
+    private void AddNewUser()
+    {
+        newUser.SecurityLevel = 1;
+        if (password.Equals(confirmPassword))
+        {
+            newUser.Password = password;
+
+            UsersService.AddUser(newUser);
+            NavigationManager.NavigateTo("/Login");
+        }
+    }
+}
