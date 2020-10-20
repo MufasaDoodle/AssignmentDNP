@@ -12,18 +12,6 @@
     "Sex": "M"
   },
   {
-    "JobTitle": "Front Desk Coordinator",
-    "Id": 6,
-    "FirstName": "Zaynab",
-    "LastName": "Schultz",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 34,
-    "Weight": 150,
-    "Height": 160,
-    "Sex": "F"
-  },
-  {
     "JobTitle": "Aquatic Ecologist",
     "Id": 7,
     "FirstName": "Kaidence",
@@ -34,30 +22,6 @@
     "Weight": 65.8,
     "Height": 162,
     "Sex": "F"
-  },
-  {
-    "JobTitle": "Casino Host",
-    "Id": 8,
-    "FirstName": "Magnus",
-    "LastName": "Rivas",
-    "HairColor": "Brown",
-    "EyeColor": "Brown",
-    "Age": 53,
-    "Weight": 67.4,
-    "Height": 171,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Chemist",
-    "Id": 9,
-    "FirstName": "Zayne",
-    "LastName": "Douglas",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 48,
-    "Weight": 78.6,
-    "Height": 169,
-    "Sex": "M"
   },
   {
     "JobTitle": "Business Development Manager",
@@ -453,6 +417,18 @@
     "Age": 55,
     "Weight": 80.2,
     "Height": 184,
+    "Sex": "M"
+  },
+  {
+    "JobTitle": "Unemployed",
+    "Id": 1,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "HairColor": "Black",
+    "EyeColor": "Blue",
+    "Age": 25,
+    "Weight": 128,
+    "Height": 180,
     "Sex": "M"
   }
 ]
