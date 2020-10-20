@@ -30,6 +30,7 @@ namespace DNPAssignment
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddSingleton<IPersonService, PersonService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 

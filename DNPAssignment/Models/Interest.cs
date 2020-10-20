@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Models {
+namespace DNPAssignment.Models {
 public class Interest {
     [Key]
     public string Type { get; set; }

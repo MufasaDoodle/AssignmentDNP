@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Models
+namespace DNPAssignment.Models
 {
     public class Adult : Person
     {

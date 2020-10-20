@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using Models;
+using DNPAssignment.Models;
 
-namespace FileData
+namespace DNPAssignment.FileData
 {
     public class FileContext
     {
